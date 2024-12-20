@@ -37,6 +37,8 @@ int main()
 
     cout << "Front element -> " << arr.front() << endl; // Accessing the first element is O(1).
 
+    // cout << "Erase element -> " << arr.erase(3) << endl;
+
     for (int i : arr)
     {
         cout << i << endl;
