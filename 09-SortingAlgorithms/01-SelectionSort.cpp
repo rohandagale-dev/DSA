@@ -34,4 +34,4 @@ int main()
 }
 
 // time complexity = O(n^2)
-// spacec complexity = O(n)
+// spacec complexity = O(1) in-place sorting algorithm

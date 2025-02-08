@@ -1,16 +1,15 @@
 #include <iostream>
 using namespace std;
 
-void bubbleSort(int arr[], int size)
+void insertionSort(int arr[], int n)
 {
-    for (int i = size - 1; i >= 0; i--)
+    for (int i = 0; i <= n - 1; i++)
     {
-        for (int j = 0; j < i; j++)
+        int j = i;
+        while (j > 0 && arr[j - 1] > arr[j])
         {
-            if (arr[j] > arr[j + 1])
-            {
-                swap(arr[j], arr[j + 1]);
-            }
+            swap(arr[j - 1], arr[j]);
+            j--;
         }
     }
 }
@@ -21,13 +20,13 @@ void print(int arr[], int size)
     {
         cout << arr[i] << " ";
     }
-}   
+}
 
 int main()
 {
 
     int arr[8] = {4, 6, 3, 9, 5, 2, 1, 7};
-    bubbleSort(arr, 8);
+    insertionSort(arr, 8);
     print(arr, 8);
     return 0;
 }
